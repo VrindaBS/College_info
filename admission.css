@@ -1,6 +1,5 @@
-
 body {
-  background-color: #280054;
+  background: linear-gradient(45deg, rgb(40, 2, 40), black); /* Adjusted for clarity */
   color: white;
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -8,48 +7,56 @@ body {
   text-align: center;
 }
 
-#container {
-  background-color: #280054;
-  width: 100%;
-  height: 450px;
+#header-content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  position: relative;
+  padding: 20px; /* Add some padding to create space around the content */
+  z-index: 100;
 }
 
-#image {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
+.separator {
+  border: 0;
+  height: 1px;
+  background:white;
+  margin: 20px 0;
+}
+
+#logo {
+  width: 100px;
+  height: auto;
+}
+
+#text-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Full width for the text container */
+  height: 120px; /* Increased height */
+  margin-left: 20px;
+  margin-bottom: 2px solid black;
 }
 
 #headp {
-  font-size: 148px;
+  font-size: 48px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 20px; /* Increased margin-top */
-  margin-bottom: 20px; /* Added margin-bottom for extra space */
-  position: absolute;
+  margin: 0;
+  color: #ffffff;
   white-space: nowrap;
-  animation: moveAcross 20s linear infinite;
-  color:#280054
+  position: absolute;
+  top: 40px; /* Moved down */
+  animation: moveAcross 10s linear infinite;
 }
 
 @keyframes moveAcross {
-  0% { left: -100%; }
-  50% { left: 100%; }
-  100% { left: -100%; }
-}
-#con1, #con2, #con3 {
-  font-size: 24px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 5px 0;
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .navbar {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
   padding: 15px 0;
   list-style: none;
   margin: 0;
@@ -74,30 +81,29 @@ body {
   font-size: 30px;
 }
 
-
 .navbar a.active {
   color: #472781;
-  
 }
 
 h2 {
   font-size: 50px;
   font-weight: bold;
   margin: 30px 0;
+  text-decoration: underline;
   text-transform: uppercase;
   color: white;
-  text-shadow: 0 0 10px rgba(240, 82, 228, 0.8); /* Glowing effect */
+  text-shadow: 0 0 10px rgba(240, 82, 228, 0.8);
   animation: glow 1s ease-in-out infinite alternate;
 }
 
 #admission, #eligibility {
-  width: 60%;
-  margin: 0 auto 30px; /* Center and add bottom margin */
+  width: 80%;
+  margin: 0 auto 30px;
   padding: 20px;
-  background-color:#1E1136; /* Highlight color */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 10px #030005; /* Soft shadow */
-  text-align: left; /* Align text left */
+  background-color: rgb(33, 6, 33); /* Semi-transparent background color */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(84, 2, 84);
+  text-align: left;
 }
 
 #admission h3, #eligibility h3 {
@@ -110,12 +116,13 @@ h2 {
 #admission p, #eligibility p {
   font-size: 18px;
   line-height: 1.5;
-  text-align: center; /* Center align paragraphs */
+  text-align: left;
 }
+
 #footer {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
   padding: 20px;
-  text-align: center; /* Center align text */
+  text-align: center;
 }
 
 #footer-address p {
@@ -124,7 +131,6 @@ h2 {
   margin-bottom: 10px;
 }
 
-
 @keyframes glow {
   from {
     text-shadow: 0 0 10px rgba(240, 82, 228, 0.8);
@@ -132,4 +138,9 @@ h2 {
   to {
     text-shadow: 0 0 20px rgba(240, 82, 228, 0.9);
   }
+}
+
+.back {
+  width: 100%;
+  height: 100%;
 }
