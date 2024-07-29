@@ -1,3 +1,4 @@
+
 body {
   background-color: #280054;
   color: white;
@@ -40,16 +41,21 @@ body {
   50% { left: 100%; }
   100% { left: -100%; }
 }
+#con1, #con2, #con3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+
 .navbar {
   background-color: #000000;
-  width: 100%;
-  padding: 15px;
+  padding: 15px 0;
+  list-style: none;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style: none;
-  margin: 0;
-
 }
 
 .navbar li {
@@ -63,15 +69,27 @@ body {
   transition: color 0.3s;
 }
 
+.navbar a:hover {
+  color: #472781;
+  font-size: 30px;
+}
+
+
 .navbar a.active {
   color: #472781;
   
 }
 
-.navbar a:hover {
-  color: #472781;
-  font-size: 30px;
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 30px 0;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 0 10px rgba(240, 82, 228, 0.8); /* Glowing effect */
+  animation: glow 1s ease-in-out infinite alternate;
 }
+
 
 h2 {
   font-size: 50px;
